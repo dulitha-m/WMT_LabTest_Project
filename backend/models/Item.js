@@ -27,14 +27,14 @@ const itemSchema = new mongoose.Schema(
       default: "",
       trim: true,
     },
-    discountPercentage: {
-      type: Number,
-      default: 0,
-      min: [0, "Discount cannot be negative"],
-      max: [100, "Discount cannot be greater than 100"],
+    serialNumber: {
+      type: String,
+      required: [true, "Serial Number is required"],
+      trim: true,
+      unique: true,
     },
   },
   { timestamps: true }
 );
 
-export default mongoose.model("Item", itemSchema, "students");
+export default mongoose.model("Item", itemSchema);

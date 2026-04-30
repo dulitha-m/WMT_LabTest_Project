@@ -63,6 +63,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         <option value="Limited Stock">Limited Stock</option>
       </select>
 
+      <br></br>
       <button className="btn primary" type="submit">{submitText}</button>
     </form>
   );
